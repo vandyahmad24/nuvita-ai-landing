@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/privacy.css';
+
+const title = 'Kebijakan Privasi - Nuvita AI';
+const description = 'Kebijakan privasi Nuvita AI mengenai pengumpulan, penggunaan, dan perlindungan data pribadi pengguna.';
+---
+
+<BaseLayout title={title} description={description}>
+  <nav class="privacy-nav">
+    <a class="brand" href="/">
+      <img src="/images/nuvita-logo.png" alt="Logo Nuvita AI" width="44" height="44" />
+      <span>Nuvita AI</span>
+    </a>
+    <a class="back-link" href="/">← Kembali</a>
+  </nav>
+
+  <article class="privacy-page">
+    <div class="privacy-container">
+      <header class="privacy-header">
+        <h1>Kebijakan Privasi</h1>
+        <p class="last-updated">Terakhir diperbarui: 24 Mei 2026</p>
+      </header>
+
+      <section class="privacy-section">
+        <h2>1. Pendahuluan</h2>
+        <p>
+          Nuvita AI ("kami", "aplikasi") berkomitmen untuk melindungi privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda saat menggunakan aplikasi mobile Nuvita AI.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>2. Informasi yang Kami Kumpulkan</h2>
+        
+        <h3>2.1 Informasi Akun</h3>
+        <p>Saat Anda mendaftar, kami mengumpulkan:</p>
+        <ul>
+          <li>Nama lengkap</li>
+          <li>Alamat email</li>
+          <li>Nomor telepon</li>
+          <li>Kata sandi (terenkripsi)</li>
+        </ul>
+
+        <h3>2.2 Data Kesehatan & Nutrisi</h3>
+        <p>Untuk memberikan rekomendasi nutrisi yang personal, kami mengumpulkan:</p>
+        <ul>
+          <li>Informasi profil kesehatan (usia, berat badan, tinggi badan, kondisi kesehatan)</li>
+          <li>Riwayat konsumsi makanan</li>
+          <li>Target nutrisi dan diet</li>
+          <li>Foto makanan yang Anda unggah untuk analisis nutrisi</li>
+        </ul>
+
+        <h3>2.3 Izin Akses Perangkat</h3>
+        <p><strong>Kamera:</strong> Kami meminta izin akses kamera untuk memungkinkan Anda mengambil foto makanan secara langsung dari aplikasi. Foto ini digunakan untuk analisis nutrisi berbasis AI.</p>
+        
+        <p><strong>Galeri/Penyimpanan:</strong> Kami meminta izin akses galeri dan penyimpanan perangkat untuk:</p>
+        <ul>
+          <li>Memilih foto makanan yang sudah ada di galeri Anda</li>
+          <li>Menyimpan hasil analisis nutrisi dan laporan ke perangkat Anda</li>
+          <li>Mengakses foto profil yang Anda pilih</li>
+        </ul>
+        
+        <p class="permission-note">
+          <strong>Catatan Penting:</strong> Kami TIDAK mengakses, menyimpan, atau mengunggah foto lain dari galeri Anda selain foto yang secara eksplisit Anda pilih untuk dianalisis. Semua akses memerlukan persetujuan Anda setiap kali.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>3. Bagaimana Kami Menggunakan Informasi Anda</h2>
+        <p>Informasi yang kami kumpulkan digunakan untuk:</p>
+        <ul>
+          <li>Menyediakan layanan analisis nutrisi berbasis AI</li>
+          <li>Memberikan rekomendasi makanan dan diet yang dipersonalisasi</li>
+          <li>Melacak progres kesehatan dan nutrisi Anda</li>
+          <li>Meningkatkan akurasi dan kualitas layanan kami</li>
+          <li>Mengirimkan notifikasi terkait aktivitas akun dan fitur baru</li>
+          <li>Memberikan dukungan pelanggan</li>
+        </ul>
+      </section>
+
+      <section class="privacy-section">
+        <h2>4. Penyimpanan dan Keamanan Data</h2>
+        <p>
+          Kami menggunakan langkah-langkah keamanan teknis dan organisasi yang sesuai untuk melindungi data pribadi Anda dari akses, penggunaan, atau pengungkapan yang tidak sah:
+        </p>
+        <ul>
+          <li>Enkripsi data saat transit (HTTPS/TLS)</li>
+          <li>Enkripsi kata sandi menggunakan algoritma hashing yang aman</li>
+          <li>Server aman dengan akses terbatas</li>
+          <li>Backup data berkala</li>
+          <li>Monitoring keamanan 24/7</li>
+        </ul>
+        <p>
+          Data Anda disimpan di server yang berlokasi di Indonesia dan dikelola sesuai dengan standar keamanan industri.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>5. Berbagi Data dengan Pihak Ketiga</h2>
+        <p>
+          Kami TIDAK menjual, menyewakan, atau membagikan informasi pribadi Anda kepada pihak ketiga untuk tujuan pemasaran. Kami hanya membagikan data dalam kondisi berikut:
+        </p>
+        <ul>
+          <li><strong>Penyedia Layanan:</strong> Dengan penyedia layanan cloud dan infrastruktur yang membantu kami mengoperasikan aplikasi (dengan perjanjian kerahasiaan)</li>
+          <li><strong>Kewajiban Hukum:</strong> Jika diwajibkan oleh hukum atau proses hukum yang sah</li>
+          <li><strong>Persetujuan Anda:</strong> Dengan persetujuan eksplisit Anda untuk tujuan tertentu</li>
+        </ul>
+      </section>
+
+      <section class="privacy-section">
+        <h2>6. Hak Anda</h2>
+        <p>Anda memiliki hak untuk:</p>
+        <ul>
+          <li><strong>Akses:</strong> Meminta salinan data pribadi yang kami simpan tentang Anda</li>
+          <li><strong>Koreksi:</strong> Memperbarui atau memperbaiki informasi yang tidak akurat</li>
+          <li><strong>Penghapusan:</strong> Meminta penghapusan akun dan data pribadi Anda</li>
+          <li><strong>Portabilitas:</strong> Meminta data Anda dalam format yang dapat dibaca mesin</li>
+          <li><strong>Penarikan Izin:</strong> Mencabut izin akses kamera dan galeri kapan saja melalui pengaturan perangkat</li>
+        </ul>
+        <p>
+          Untuk menggunakan hak-hak ini, silakan hubungi kami di <a href="mailto:privacy@nuvita.my.id">privacy@nuvita.my.id</a>
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>7. Retensi Data</h2>
+        <p>
+          Kami menyimpan data pribadi Anda selama akun Anda aktif atau selama diperlukan untuk menyediakan layanan. Jika Anda menghapus akun, kami akan menghapus atau menganonimkan data pribadi Anda dalam waktu 30 hari, kecuali jika kami diwajibkan oleh hukum untuk menyimpannya lebih lama.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>8. Privasi Anak-Anak</h2>
+        <p>
+          Aplikasi Nuvita AI tidak ditujukan untuk anak-anak di bawah usia 13 tahun. Kami tidak secara sengaja mengumpulkan informasi pribadi dari anak-anak di bawah 13 tahun. Jika Anda adalah orang tua atau wali dan mengetahui bahwa anak Anda telah memberikan informasi pribadi kepada kami, silakan hubungi kami.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>9. Perubahan Kebijakan Privasi</h2>
+        <p>
+          Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Kami akan memberi tahu Anda tentang perubahan signifikan melalui notifikasi aplikasi atau email. Penggunaan berkelanjutan aplikasi setelah perubahan berarti Anda menerima Kebijakan Privasi yang diperbarui.
+        </p>
+      </section>
+
+      <section class="privacy-section">
+        <h2>10. Hubungi Kami</h2>
+        <p>Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, silakan hubungi kami:</p>
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:privacy@nuvita.my.id">privacy@nuvita.my.id</a></p>
+          <p><strong>Website:</strong> <a href="https://nuvita.my.id">https://nuvita.my.id</a></p>
+        </div>
+      </section>
+    </div>
+  </article>
+</BaseLayout>
