@@ -1,17 +1,191 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
 
+const faqs = [
+  {
+    question: 'Apa itu Nuvita AI?',
+    answer: 'Nuvita AI adalah aplikasi asisten nutrisi berbasis AI yang membantu pengguna memantau kalori, nutrisi, dan riwayat makanan harian dengan lebih mudah.'
+  },
+  {
+    question: 'Apakah Nuvita AI bisa menghitung kalori dari foto makanan?',
+    answer: 'Ya. Pengguna dapat mengunggah atau mengambil foto makanan, lalu AI membantu menganalisis estimasi kalori dan informasi nutrisi.'
+  },
+  {
+    question: 'Apakah Nuvita AI cocok untuk diet?',
+    answer: 'Nuvita AI cocok untuk pengguna yang ingin mengatur pola makan, memantau target kalori, dan membuat keputusan nutrisi yang lebih terukur.'
+  },
+  {
+    question: 'Apakah Nuvita AI tersedia untuk Android?',
+    answer: 'Nuvita AI disiapkan untuk pengguna Android dan dapat digunakan untuk tracking makanan, kalori, dan progres nutrisi harian.'
+  }
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Nuvita AI',
+      applicationCategory: 'HealthApplication',
+      operatingSystem: 'Android',
+      description: 'Aplikasi penghitung kalori dan asisten nutrisi AI untuk scan makanan dari foto, memantau nutrisi harian, dan mendukung program diet.',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'IDR' }
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer }
+      }))
+    }
+  ]
+};
 ---
+<BaseLayout>
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <main>
+    <section class="hero" id="home">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="#home" aria-label="Nuvita AI beranda">
+          <img src="/images/nuvita-logo.png" alt="Logo Nuvita AI" width="48" height="45" />
+          <span>Nuvita AI</span>
+        </a>
+        <div class="nav-links">
+          <a href="#fitur">Fitur</a>
+          <a href="#seo">Manfaat</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <a class="nav-cta" href="#download">Download</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">AI Nutrition Assistant • Food Scanner • Calorie Tracker</p>
+          <h1>Aplikasi penghitung kalori berbasis AI dari foto makanan.</h1>
+          <p class="lead">
+            Nuvita AI membantu kamu scan makanan, estimasi kalori, memantau nutrisi harian,
+            dan menjaga target diet tanpa ribet input manual setiap makan.
+          </p>
+          <div class="hero-actions" id="download">
+            <a class="btn primary" href="#cta">Download Aplikasi</a>
+            <a class="btn secondary" href="#fitur">Lihat Fitur</a>
+          </div>
+          <div class="trust-row" aria-label="Keunggulan utama">
+            <span>Scan foto</span>
+            <span>Kalori harian</span>
+            <span>Riwayat makan</span>
+          </div>
+        </div>
+
+        <div class="phone-stage reveal delay-1" aria-label="Preview aplikasi Nuvita AI">
+          <div class="orb orb-a"></div>
+          <div class="orb orb-b"></div>
+          <div class="phone">
+            <div class="phone-top"></div>
+            <div class="app-card profile">
+              <img src="/images/nuvita-logo.png" alt="" width="44" height="41" loading="eager" />
+              <div>
+                <strong>Target hari ini</strong>
+                <span>1.850 kcal</span>
+              </div>
+            </div>
+            <div class="calorie-ring">
+              <span>AI Scan</span>
+              <strong>624</strong>
+              <small>kcal terdeteksi</small>
+            </div>
+            <div class="macro-grid">
+              <div><b>Protein</b><span>34g</span></div>
+              <div><b>Karbo</b><span>78g</span></div>
+              <div><b>Lemak</b><span>18g</span></div>
+            </div>
+            <div class="scan-card">
+              <span class="scan-icon"></span>
+              <div>
+                <strong>Nasi ayam terdeteksi</strong>
+                <p>Estimasi nutrisi siap disimpan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem section-pad">
+      <div class="section-head reveal">
+        <p class="eyebrow">Masalah yang diselesaikan</p>
+        <h2>Tracking diet gagal bukan karena malas, tapi karena prosesnya terlalu manual.</h2>
+      </div>
+      <div class="cards three">
+        <article class="card reveal"><span class="icon line"></span><h3>Hitung kalori makan butuh waktu</h3><p>Input manual membuat pengguna cepat lelah dan akhirnya berhenti mencatat.</p></article>
+        <article class="card reveal delay-1"><span class="icon pulse"></span><h3>Data nutrisi sering tidak konsisten</h3><p>Tanpa catatan harian, sulit tahu apakah kalori masuk sudah sesuai target.</p></article>
+        <article class="card reveal delay-2"><span class="icon dot"></span><h3>Diet butuh feedback cepat</h3><p>Nuvita AI memberi estimasi cepat supaya keputusan makan lebih terukur.</p></article>
+      </div>
+    </section>
+
+    <section class="features section-pad" id="fitur">
+      <div class="split">
+        <div class="section-head reveal">
+          <p class="eyebrow">Fitur utama</p>
+          <h2>Semua yang dibutuhkan untuk pantau nutrisi harian.</h2>
+          <p>Nuvita AI menggabungkan food photo scan, calorie tracking, dan dashboard nutrisi dalam satu aplikasi ringan.</p>
+        </div>
+        <div class="feature-list">
+          <article class="feature reveal"><b>01</b><div><h3>Scan makanan dengan AI</h3><p>Ambil foto makanan dan dapatkan estimasi kalori serta nutrisi secara cepat.</p></div></article>
+          <article class="feature reveal"><b>02</b><div><h3>Penghitung kalori harian</h3><p>Pantau konsumsi kalori terhadap target personal untuk diet atau maintenance.</p></div></article>
+          <article class="feature reveal"><b>03</b><div><h3>Riwayat makanan</h3><p>Lihat pola makan dari hari ke hari agar progres lebih mudah dievaluasi.</p></div></article>
+          <article class="feature reveal"><b>04</b><div><h3>Dashboard nutrisi</h3><p>Ringkasan protein, karbohidrat, lemak, dan total kalori dalam tampilan jelas.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seo section-pad" id="seo">
+      <div class="seo-panel reveal">
+        <p class="eyebrow">SEO Content</p>
+        <h2>Aplikasi penghitung kalori AI untuk gaya hidup sehat.</h2>
+        <div class="seo-copy">
+          <p>
+            Nuvita AI dirancang sebagai aplikasi penghitung kalori berbasis AI untuk membantu pengguna Indonesia memantau makanan harian dengan cara yang lebih sederhana. Dengan fitur scan makanan dari foto, pengguna tidak perlu selalu mencari item makanan secara manual.
+          </p>
+          <p>
+            Aplikasi ini cocok untuk kamu yang sedang diet, menjaga berat badan, meningkatkan massa otot, atau sekadar ingin memahami pola makan. Nuvita AI membantu mencatat estimasi kalori, makronutrien, dan riwayat makanan sehingga progres nutrisi lebih mudah dilihat.
+          </p>
+        </div>
+        <div class="keyword-chips" aria-label="Topik SEO Nuvita AI">
+          <span>aplikasi penghitung kalori</span>
+          <span>scan makanan AI</span>
+          <span>calorie tracker Indonesia</span>
+          <span>aplikasi diet AI</span>
+          <span>food scanner app</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section-pad" id="faq">
+      <div class="section-head reveal">
+        <p class="eyebrow">Pertanyaan umum</p>
+        <h2>FAQ Nuvita AI</h2>
+      </div>
+      <div class="faq-list">
+        {faqs.map((item) => (
+          <details class="faq-item reveal">
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="final-cta" id="cta">
+      <div class="reveal">
+        <p class="eyebrow">Mulai lebih terukur</p>
+        <h2>Jadikan tracking kalori semudah mengambil foto makanan.</h2>
+        <p>Gunakan Nuvita AI untuk memahami nutrisi harian dan menjaga target diet dengan bantuan AI.</p>
+        <a class="btn primary light" href="mailto:hello@nuvita.my.id?subject=Saya%20tertarik%20dengan%20Nuvita%20AI">Hubungi / Download</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
