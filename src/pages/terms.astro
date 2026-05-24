@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/legal.css';
+
+const title = 'Syarat dan Ketentuan - Nuvita AI';
+const description = 'Syarat dan ketentuan penggunaan aplikasi Nuvita AI.';
+---
+
+<BaseLayout title={title} description={description}>
+  <nav class="legal-nav">
+    <a class="brand" href="/">
+      <img src="/images/nuvita-logo.png" alt="Logo Nuvita AI" width="44" height="44" />
+      <span>Nuvita AI</span>
+    </a>
+    <a class="back-link" href="/">← Kembali</a>
+  </nav>
+
+  <article class="legal-page">
+    <div class="legal-container">
+      <header class="legal-header">
+        <p class="eyebrow">Terms of Service</p>
+        <h1>Syarat dan Ketentuan</h1>
+        <p class="last-updated">Terakhir diperbarui: 24 Mei 2026</p>
+      </header>
+
+      <section class="legal-section">
+        <h2>1. Penerimaan Syarat</h2>
+        <p>
+          Dengan mengunduh, membuat akun, atau menggunakan aplikasi Nuvita AI, Anda menyetujui Syarat dan Ketentuan ini. Jika Anda tidak setuju, mohon tidak menggunakan aplikasi.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. Deskripsi Layanan</h2>
+        <p>
+          Nuvita AI adalah aplikasi asisten nutrisi yang membantu pengguna mencatat makanan, memperkirakan kalori, menganalisis foto makanan, dan memantau target nutrisi harian. Hasil analisis bersifat estimasi dan dapat berbeda dari nilai nutrisi sebenarnya.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. Akun Pengguna</h2>
+        <ul>
+          <li>Anda bertanggung jawab menjaga kerahasiaan akun dan kata sandi.</li>
+          <li>Informasi yang Anda berikan harus benar, akurat, dan terbaru.</li>
+          <li>Kami dapat menangguhkan akun jika ditemukan penyalahgunaan, aktivitas ilegal, atau pelanggaran ketentuan ini.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. Penggunaan Kamera dan Galeri</h2>
+        <p>
+          Aplikasi dapat meminta akses kamera dan galeri untuk mengambil atau memilih foto makanan. Foto yang Anda pilih digunakan untuk analisis nutrisi dan pencatatan makanan sesuai Kebijakan Privasi kami.
+        </p>
+        <p>
+          Kami tidak mengakses atau mengunggah foto lain dari galeri Anda tanpa tindakan dan persetujuan Anda.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. Batasan Medis dan Nutrisi</h2>
+        <div class="notice-box">
+          <p>
+            <strong>Penting:</strong> Nuvita AI bukan layanan medis, bukan alat diagnosis, dan bukan pengganti konsultasi dengan dokter, ahli gizi, atau tenaga kesehatan profesional.
+          </p>
+        </div>
+        <ul>
+          <li>Informasi kalori, makro, dan nutrisi adalah estimasi.</li>
+          <li>Jangan menggunakan aplikasi sebagai satu-satunya dasar keputusan medis.</li>
+          <li>Jika Anda memiliki kondisi medis, alergi, gangguan makan, sedang hamil, menyusui, atau menjalani diet khusus, konsultasikan dengan profesional kesehatan.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Larangan Penggunaan</h2>
+        <ul>
+          <li>Menggunakan aplikasi untuk aktivitas ilegal atau merugikan pihak lain.</li>
+          <li>Mengunggah konten yang melanggar hukum, tidak pantas, atau bukan milik Anda.</li>
+          <li>Mencoba merusak, membongkar, melakukan reverse engineering, atau mengganggu sistem aplikasi.</li>
+          <li>Menyalahgunakan hasil AI untuk klaim medis yang tidak benar.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. Ketersediaan Layanan</h2>
+        <p>
+          Kami berupaya menjaga layanan tetap tersedia dan aman. Namun, aplikasi dapat mengalami gangguan karena pemeliharaan, masalah teknis, koneksi internet, atau faktor lain di luar kendali kami.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>8. Pembatasan Tanggung Jawab</h2>
+        <p>
+          Sejauh diizinkan oleh hukum yang berlaku, Nuvita AI tidak bertanggung jawab atas kerugian langsung atau tidak langsung yang timbul dari penggunaan aplikasi, termasuk keputusan diet, kesehatan, atau gaya hidup yang dibuat berdasarkan estimasi aplikasi.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>9. Perubahan Syarat</h2>
+        <p>
+          Kami dapat memperbarui Syarat dan Ketentuan ini dari waktu ke waktu. Perubahan akan dipublikasikan di halaman ini. Penggunaan aplikasi setelah perubahan berarti Anda menyetujui ketentuan yang diperbarui.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>10. Kontak</h2>
+        <p>
+          Jika Anda memiliki pertanyaan tentang Syarat dan Ketentuan ini, hubungi kami melalui <a href="mailto:hello@nuvita.my.id">hello@nuvita.my.id</a>.
+        </p>
+      </section>
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/legal.css';
+
+const title = 'Disclaimer Nutrisi - Nuvita AI';
+const description = 'Disclaimer nutrisi dan batasan penggunaan hasil analisis AI pada aplikasi Nuvita AI.';
+---
+
+<BaseLayout title={title} description={description}>
+  <nav class="legal-nav">
+    <a class="brand" href="/">
+      <img src="/images/nuvita-logo.png" alt="Logo Nuvita AI" width="44" height="44" />
+      <span>Nuvita AI</span>
+    </a>
+    <a class="back-link" href="/">← Kembali</a>
+  </nav>
+
+  <article class="legal-page">
+    <div class="legal-container">
+      <header class="legal-header">
+        <p class="eyebrow">Health & Nutrition Notice</p>
+        <h1>Disclaimer Nutrisi</h1>
+        <p class="last-updated">Terakhir diperbarui: 24 Mei 2026</p>
+      </header>
+
+      <section class="legal-section">
+        <h2>1. Informasi Umum</h2>
+        <p>
+          Nuvita AI menyediakan informasi nutrisi, estimasi kalori, dan catatan makanan untuk membantu pengguna memahami pola makan harian. Informasi ini bersifat edukatif dan pendukung gaya hidup sehat, bukan nasihat medis profesional.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. Bukan Pengganti Dokter atau Ahli Gizi</h2>
+        <div class="notice-box">
+          <p>
+            <strong>Nuvita AI bukan alat diagnosis medis.</strong> Aplikasi ini tidak dimaksudkan untuk mendiagnosis, mengobati, mencegah, atau menyembuhkan penyakit apa pun.
+          </p>
+        </div>
+        <p>
+          Untuk keputusan yang berkaitan dengan kondisi medis, alergi, kebutuhan kalori khusus, gangguan makan, kehamilan, menyusui, atau terapi diet tertentu, selalu konsultasikan dengan dokter, ahli gizi, atau tenaga kesehatan profesional.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. Estimasi AI Bisa Tidak Akurat</h2>
+        <p>
+          Analisis foto makanan menggunakan AI menghasilkan estimasi berdasarkan gambar, deskripsi, dan data yang tersedia. Hasil dapat berbeda dari nilai nutrisi sebenarnya karena beberapa faktor:
+        </p>
+        <ul>
+          <li>Porsi makanan tidak terlihat jelas atau tertutup.</li>
+          <li>Foto blur, terlalu gelap, terlalu terang, atau terpotong.</li>
+          <li>Bahan makanan, minyak, saus, atau bumbu tidak terlihat pada foto.</li>
+          <li>Perbedaan resep, cara memasak, dan ukuran sajian.</li>
+          <li>AI salah mengenali jenis makanan atau bahan tertentu.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. Tanggung Jawab Pengguna</h2>
+        <ul>
+          <li>Gunakan hasil analisis sebagai panduan awal, bukan angka absolut.</li>
+          <li>Periksa ulang informasi makanan jika Anda memiliki kebutuhan diet ketat.</li>
+          <li>Jangan mengabaikan nasihat medis profesional karena informasi dari aplikasi.</li>
+          <li>Segera cari bantuan medis jika Anda mengalami gejala kesehatan serius.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. Alergi dan Kondisi Khusus</h2>
+        <p>
+          Nuvita AI tidak menjamin deteksi alergi, kontaminasi silang, atau komposisi bahan tersembunyi. Jika Anda memiliki alergi makanan, penyakit kronis, atau pantangan medis, jangan hanya mengandalkan hasil analisis aplikasi.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Perubahan Berat Badan dan Target Diet</h2>
+        <p>
+          Target kalori dan rekomendasi umum dalam aplikasi hanya bersifat estimasi. Penurunan atau kenaikan berat badan dipengaruhi banyak faktor, termasuk metabolisme, aktivitas fisik, kondisi medis, obat-obatan, tidur, dan stres.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. Kontak</h2>
+        <p>
+          Jika Anda memiliki pertanyaan tentang disclaimer ini, hubungi kami melalui <a href="mailto:hello@nuvita.my.id">hello@nuvita.my.id</a>.
+        </p>
+      </section>
+    </div>
+  </article>
+</BaseLayout>
